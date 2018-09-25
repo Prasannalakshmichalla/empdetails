@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form new validation attributes - HTML5</title>
+
+<script type="text/javascript">
+    function Validate() {
+        var Cid = document.getElementById("Cid");
+        var Cname = document.getElementById("Cname");
+        var Ccode = document.getElementById("Ccode");
+        var room = document.getElementById("room");
+        if (Cid.value == "") {
+            alert("Please select an Cid!");
+            return false;
+        }
+         if (Cname.value == "") {
+            alert("Please select an Cname!");
+            return false;
+        }
+         if (Ccode.value == "") {
+            alert("Please select an Ccode!");
+            return false;
+        }
+        if (room.value == "") {
+            alert("Please select an Room!");
+            return false;
+        }
+        var numbc = document.getElementById("numbc");
+        var number = /^[1-9]?[1-9][0-9]$/;
+        if (numbc.number.value == "") {
+            alert("Please select an Persons!");
+            return false;
+        }
+
+
+        return true;
+    }
+
+function CalulateCost(){
+
+	var	sbcost = 700;
+	var dbcost = 1200;
+	var Excost = 1400;
+	var nigt = document.getElementById("nights").value;
+	if(room.value==1){
+	var	nigt1 = document.write(nigt) * sbcost;
+	document.write(nigt1);
+	}
+    if(room.value==2){
+		nigt2 = document.write(nigt) * dbcost;
+	document.write(nigts2);
+	}
+    if(room.value==3){
+		nigt3 = document.write(nigt) * sbcost;
+		document.write(nigts3);
+	}
+
+}
+
+
+//     function between(x, min, max) {
+//   return x >= min && x <= max;
+// }
+// // ...
+// if (between(x, 0.001, 0.009)) {
+//
+// }
+
+//     var x = document.getElementsByName('myform');
+// x[0].submit(); 
+function results(){
+   var name = document.getElementById("name").value;
+   var email = document.getElementById("email").value;
+   var phone = document.getElementById("phone").value;
+   var Cid = document.getElementById("Cid").value;
+   var Cname = document.getElementById("Cname").value;
+  var Ccode = document.getElementById("Ccode").value;
+   var address = document.getElementById("address").value;
+   var persons = document.getElementById("persons").value;
+  var room = document.getElementById("room").value;
+  var nights = document.getElementById("nights").value;
+	document.write(name +"<br/>");
+	document.write(email +"<br/>");
+	document.write(phone +"<br/>");
+	document.write(Cid +"<br/>");
+	document.write(Cname + "<br/>");
+ 	document.write(Ccode + "<br/>");
+	document.write(address + "<br/>");
+	document.write(persons + "<br/>");
+ 	document.write(room + "<br/>");
+ 	document.write(nights + "<br/>");
+}
+
+</script>
+
+</head>
+<body>
+	<form method="POST" onsubmit="return results()" action="#" enctype="multipart/form-data" name="myform" id="formid" autocomplete="off">
+		<div><input type="text" name="firstname" id="name" placeholder="Enter firstname" required="true" minlength="5" maxlength="30"></div><br/>
+		<div><input type="email" name="Email" id="email" placeholder="Enter Email" required="true"></div><br/>
+		<div><input type="tel" id="phone" name="phone" id="phone" placeholder="123-456-7890"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /></div><br/>
+<div>
+<table>
+<tr>
+<td>
+<select id="Cid">
+<option value="0">---Cid--</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+</td>
+<td>
+<select id="Cname">
+<option value="0">---Cname--</option>
+<option value="1">91-india</option>
+<option value="2">92-Pakistan</option>
+<option value="3">93-UK</option>
+<option value="4">94-US</option>
+<option value="5">95-AUG</option>
+</select>
+</td>
+<td>
+<select id="Ccode">
+<option value="0">---Ccode--</option>
+<option value="1">123</option>
+<option value="2">456</option>
+<option value="3">789</option>
+<option value="4">234</option>
+<option value="5">876</option>
+</select>
+</td>
+</tr>
+</table>
+</div>
+<br/>
+<div><textarea name="address" required="true" id="address" minlength="5" placeholder="Enter Address" maxlength="2000"></textarea></div><br/>
+<div><input type="number" value="persons" id="persons" required="true" id="numbc" placeholder="Enter No of persons" minlength="1" maxlength="90"></div><br/>
+<div><select id="room">
+<option value="0">---select room--</option>
+<option value="1" max="2">Single Bed Room</option>
+<option value="2" max="3">Double Bed Room</option>
+<option value="3" max="3">Executive Room</option>
+</select>
+</div>
+<br/>
+
+<div><input type="number" value="Nights" id="nights" required="true" placeholder="Enter No of Nights" minlength="1" maxlength="90"></div>
+<br/>
+<input type="submit" name="login" value="Calulate Cost" onclick="return CalulateCost()">
+<input type="submit" name="login" value="Submit" onclick="return Validate()">
+
+</form>
+
+</body>
+</html>
