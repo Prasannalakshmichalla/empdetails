@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+script type="text/javascript">
+// function first(){
+// 	document.getElementById("first1").style.display="block";
+// }
+$(document).ready(function(){
+    $("#first").click(function(){
+        $("first1").show();
+    });
+});
+
+
+function second(){
+	document.getElementById("second2").style.display="block";
+}
+function third(){
+	document.getElementById("third3").style.display="block";
+}
+function four(){
+	document.getElementById("four4").style.display="block";
+}
+function five(){
+	document.getElementById("five5").style.display="block";
+}
+function results(){
+   var items = document.getElementById("items").value;
+   var dist = document.getElementById("dist").value;
+   var tbill = document.getElementById("tbill").value;
+   document.write(items + "<br/>");
+   document.write(dist + "<br/>");
+   document.write(tbill + "<br/>");
+</script>
+
+<script>
+$(document).ready(function(){
+    
+    $("#show").click(function(){
+        $("first1").show();
+    });
+});
+</script>
+
+
+</head>
+
+<body>
+<!-- <form method="POST" onsubmit="return results()" action="#" enctype="multipart/form-data" name="myform" id="formid" autocomplete="off"> -->
+
+<div><label>No of Items</label>
+<select id="items">
+<option value="0">---select--</option>
+<option onClick="first()" id="fir">1</option>
+<option onClick="second()">2</option>
+<option onClick="Third()">3</option>
+<option onClick="four()">4</option>
+<option onClick="five()">5</option>
+</select>
+</div>
+<br/>
+<button id="show">Show</button>
+<br/>
+<div>
+<div id="first1">
+<label>Item1</label><input type="text" placeholder="Enter Items">
+<label>Price1</label><input type="number" placeholder="Enter price">
+</div>
+<div id="second2">
+<label>Item2</label><input type="text" placeholder="Enter Items">
+<label>Price2</label><input type="number" placeholder="Enter price">
+</div>
+<div id="third3">
+<label>Item3</label><input type="text" placeholder="Enter Items">
+<label>Price3</label><input type="number" placeholder="Enter price">
+</div>
+<div id="four4">
+<label>Item4</label><input type="text" placeholder="Enter Items">
+<label>Price4</label><input type="number" placeholder="Enter price">
+</div>
+<div id="five5">
+<label>Item5</label><input type="text" placeholder="Enter Items">
+<label>Price5</label><input type="number" placeholder="Enter price">
+</div>
+</div>
+<div id="dist"><label>Discount</label>
+	<select id="items">
+<option value="0">---select--</option>
+<option value="">Employe</option>
+<option value="">Affiliate</option>
+<option value="">Regular emp</option>
+<option value="">>$100</option>
+</select>
+<!-- <input type="number" name="discount"> -->
+</div><br/>
+<div id="tbill"><label>Total Bill</label>
+<input type="number" name="discount">
+</div>
+<br/>
+<input type="submit" name="login" value="Submit" onclick="return Validate()">
+<!-- </form> -->
+
+
+</body>
+</html>
