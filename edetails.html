@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function emp_dts(name, id, exp){
+ this.name = name;
+ this.id = id;
+ this.exp = exp;
+}
+var emps = new Array({name:"Lakshmi", id:1, exp:2},{name:"Raj", id:2, exp:1},{name:"Prasu", id:3, exp:3});
+var data = new Array();
+for(i=0 ; i<emps.length; i++){
+   var dt = new emp_dts(emps[i].name, emps[i].id, emps[i].exp);
+   data.push(dt);
+}
+
+
+// function emp_details(data){
+//     l={}
+//     for (i=0;  i<data.length; i++) {
+//       var emp_details = l.unshift({i.name:{"id":i.id,
+//                                    "exp":i.exp}});
+//     document.write(emp_details);
+// }
+// }
+// document.write(l[0]);
+document.write(data[0].name + "-" +data[0].id + "-" + data[0].exp + "<br/>");
+document.write(data[1].name + "-" +data[1].id + "-" + data[1].exp+ "<br/>");
+document.write(data[2].name + "-" +data[2].id + "-" + data[2].exp+ "<br/>");
+
+// document.write(emps.length);
+// document.write(emps.name);
+
+</script>
+
+</body>
+</html>
