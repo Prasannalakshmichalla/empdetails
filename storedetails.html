@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+function store_dts(item_name, item_price){
+ this.item_name=item_name;
+ this.item_price=item_price;
+ // Store_details.items_count+=1;
+}
+var items = new Array({item_name:"sugar", item_price:40},{item_name:"Badam", item_price:60},{item_name:"Oil", item_price:80});
+var data_items = new Array();
+for(i=0 ; i<items.length; i++){
+   var items_dts = new store_dts(items[i].item_name, items[i].item_price);
+   data_items.push(items_dts);
+}
+// function Store_details(data_items){
+//     l={}
+//     for (i=0;  i<data_items.length; i++) {
+//       var Store_details = l.unshift({i.item_name:{"price":i.item_price}});
+//     document.write(Store_details);
+// }
+// }
+
+document.write(data_items[0].item_name + "-" +data_items[0].item_price+ "<br/>");
+document.write(data_items[1].item_name + "-" +data_items[1].item_price+ "<br/>");
+document.write(data_items[2].item_name + "-" +data_items[2].item_price+ "<br/>");
+
+// document.write(data_items[0].item_name + "<br/>" +data_items[1].item_name + "<br/>" +data_items[2].item_name+ "<br/>");
+// document.write(data_items[0].item_price + "<br/>" +data_items[1].item_price + "<br/>" +data_items[2].item_price);
+// document.write(items.length);
+// document.write(items.item_name);
+
+
+</script>
+</body>
